@@ -1,20 +1,33 @@
-<script language = JavaScript>
-function password() {
-	var testV = 1;
-	var pass1 = prompt('请输入密码:', '');
-	while (testV < 3) {
-		if (!pass1) history.go(-1);
-		if (pass1 == "123456") {
-			alert('密码正确!');
-			break;
-		}
-		testV += -1;
-		var pass1 = prompt('密码错误!请重新输入:');
-	}
-	if (pass1 != "password" & testV == 3) history.go(-1);
-	return " ";
+var password = 123456;
+var input = document.getElementById("password");
+var td = document.getElementsByTagName("td");
+for(var i = 0;i < td.length;i++){
+	td[i].style.color = "white"
+	td[i].style.backgroundColor = "#EAEAEA";
+	td[i].style.borderRadius = "50px";
 }
-document.write(password());
-</script>
+function dodown(obj){
+	obj.style.backgroundColor = "darkgray";
+	input.value += obj.id;
+	
+}
+function doup(obj){
+	obj.style.backgroundColor = "#EAEAEA";
+	if(input.value.length == 6){
+		if(input.value == password){
+			alert("登录成功");
+			location.href="https://sobaigu.com";
+		}else{
+			alert("密码错误，登录失败")
+			input.value = null;
+		}
+	}
+}
+function doenter(obj){
+	obj.style.backgroundColor = "lightgray";
+}
+function doout(obj){
+	obj.style.backgroundColor = "#EAEAEA";
+}
 
 <h1>海涛资源网</h1>
