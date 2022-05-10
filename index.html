@@ -1,33 +1,20 @@
-var password = 123456;
-var input = document.getElementById("password");
-var td = document.getElementsByTagName("td");
-for(var i = 0;i < td.length;i++){
-	td[i].style.color = "white"
-	td[i].style.backgroundColor = "#EAEAEA";
-	td[i].style.borderRadius = "50px";
-}
-function dodown(obj){
-	obj.style.backgroundColor = "darkgray";
-	input.value += obj.id;
-	
-}
-function doup(obj){
-	obj.style.backgroundColor = "#EAEAEA";
-	if(input.value.length == 6){
-		if(input.value == password){
-			alert("登录成功");
-			location.href="https://sobaigu.com";
-		}else{
-			alert("密码错误，登录失败")
-			input.value = null;
-		}
-	}
-}
-function doenter(obj){
-	obj.style.backgroundColor = "lightgray";
-}
-function doout(obj){
-	obj.style.backgroundColor = "#EAEAEA";
-}
+<span style="font-family: 黑体;">请输入密码:</span><input id="password" type="password" name="密码输入框"/>
+<table width="300" height="300" style="text-align: center;">
+	<tr>
+		<td id="1" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">1</td>
+		<td id="2" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">2</td>
+		<td id="3" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">3</td>
+	</tr>
+	<tr>
+		<td id="4" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">4</td>
+		<td id="5" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">5</td>
+		<td id="6" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">6</td>
+	</tr>
+	<tr>
+		<td id="7" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">7</td>
+		<td id="8" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">8</td>
+		<td id="9" onmouseenter="doenter(this)" onmouseout="doout(this)" onmousedown="dodown(this)" onmouseup="doup(this)">9</td>
+	</tr>
+</table>
 
 <h1>海涛资源网</h1>
